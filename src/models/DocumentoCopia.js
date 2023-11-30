@@ -6,6 +6,16 @@ class DocumentoCopia {
     this.tipo = tipo;
     this.documento_id = documento_id;
   }
+  
+  obtenerInfoCompleta() {
+    return {
+      id: this.id,
+      url_doc: this.url_doc,
+      estado: this.estado,
+      tipo: this.tipo,
+      documento_id: this.documento_id
+    };
+  }
 }
 
 module.exports = DocumentoCopia;

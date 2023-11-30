@@ -127,11 +127,7 @@ async function obtenerEstudianteUsuario(callback) {
     `;
     const [results] = await db.promise().query(query);
     await db.end();
-    if (results.length === 0) {
-      callback(null, results);
-    } else {
-      callback(null, results);
-    }
+    callback(null, results);
   } catch (err) {
     callback(err, null);
   }

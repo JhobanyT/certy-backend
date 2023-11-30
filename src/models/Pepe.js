@@ -4,6 +4,14 @@ class Pepe {
     this.plan_estudio_id = plan_estudio_id;
     this.programa_estudio_id = programa_estudio_id;
   }
+
+  obtenerRelacionCompleta() {
+    return {
+      id: this.id,
+      plan_estudio_id: this.plan_estudio_id,
+      programa_estudio_id: this.programa_estudio_id
+    };
+  }
 }
 
 module.exports = Pepe;

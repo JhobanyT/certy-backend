@@ -13,6 +13,23 @@ class Certificado {
     this.documento_id = documento_id;
     this.estudiante_id = estudiante_id;
   }
+
+  obtenerInfoCompleta() {
+    return {
+      id: this.id,
+      nombre_certificado: this.nombre_certificado,
+      tipo: this.tipo,
+      estado: this.estado,
+      codigo: this.codigo,
+      creditos: this.creditos,
+      horas: this.horas,
+      lugar: this.lugar,
+      fecha_creacion: this.fecha_creacion,
+      nivel_academico_id: this.nivel_academico_id,
+      documento_id: this.documento_id,
+      estudiante_id: this.estudiante_id
+    };
+  }
 }
 
 module.exports = Certificado;

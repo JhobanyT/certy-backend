@@ -6,6 +6,15 @@ class Usuario {
     this.clave = clave;
     this.estado = estado;
   }
+
+  obtenerInfoSinClave() {
+    return {
+      id: this.id,
+      nombre: this.nombre,
+      correo: this.correo,
+      estado: this.estado
+    };
+  }
 }
 
 module.exports = Usuario;

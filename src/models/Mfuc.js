@@ -4,6 +4,14 @@ class Mfuc {
     this.modulo_formativo_id = modulo_formativo_id;
     this.unidad_competencia_id = unidad_competencia_id;
   }
+
+  obtenerRelacionCompleta() {
+    return {
+      id: this.id,
+      modulo_formativo_id: this.modulo_formativo_id,
+      unidad_competencia_id: this.unidad_competencia_id
+    };
+  }
 }
 
 module.exports = Mfuc;

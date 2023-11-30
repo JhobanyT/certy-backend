@@ -31,6 +31,8 @@ async function obtenerUsuarioConRolPorCorreo(correo) {
     await db.end();
     return result.length > 0 ? result[0] : null;
   } catch (err) {
+    //sonar
+    console.error('Error al obtener usuario con rol:', err);
     throw err;
   }
 }

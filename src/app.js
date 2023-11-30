@@ -1,5 +1,6 @@
 const express = require('express');
 const cors = require('cors');
+const helmet = require('helmet');
 const usuarioRouter = require('./routes/usuarioRouter.js');
 const documentoRouter = require('./routes/documentoRouter.js');
 const insRouter = require('./routes/insRouter.js');
@@ -24,8 +25,15 @@ const ucudRouter = require('./routes/ucudRouter.js');
 const mfucRouter = require('./routes/mfucRouter.js');
 const udpRouter = require('./routes/udpRouter.js');
 const app = express();
+app.use(helmet());
 
-app.use(cors());
+const allowedOrigin = 'http://localhost:5173';
+
+const corsOptions = {
+  origin: allowedOrigin,
+};
+
+app.use(cors(corsOptions));
 
 // Configurar encabezados de seguridad
 app.use((req, res, next) => {
